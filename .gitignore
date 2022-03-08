@@ -1,0 +1,16 @@
+*.bak?
+*.bak??
+*.bak???
+node_modules
+inspection.pdf
+Inspection.pdf
+Inspection?.pdf
+Dokument.bbl
+Dokument.bcf
+Dokument.blg
+Dokument.log
+indent.log
+texput.log
+Dokument.run.xml
+Dokument.toc
+Dokument.aux

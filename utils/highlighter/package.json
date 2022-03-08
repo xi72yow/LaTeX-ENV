@@ -1,0 +1,16 @@
+{
+  "name": "highlighter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "latexCodeHighlighter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vscode-oniguruma": "^1.6.1",
+    "vscode-textmate": "^6.0.0"
+  }
+}

@@ -1,0 +1,14 @@
+<@\textcolor{Gray}{/**}@>
+<@\textcolor{Gray}{ *}@>
+<@\textcolor{Gray}{ * }@><@\textcolor{Tan}{ @param}@><@\textcolor{Gray}{ \{string\} center longitude,latitude}@>
+<@\textcolor{Gray}{ * }@><@\textcolor{Tan}{ @param}@><@\textcolor{Gray}{ \{string\} size widthxheight}@>
+<@\textcolor{Gray}{ * }@><@\textcolor{Tan}{ @param}@><@\textcolor{Gray}{ \{string\} zoom zoom the map, equivalent: zoom 9=>New York; zoom 11=>Berlin; zoom 13=>Jena; zoom 15=>Blankenhain; zoom 17=>Rottdorf; zoom 19=>Grundstück}@>
+<@\textcolor{Gray}{ * }@><@\textcolor{Tan}{ @param}@><@\textcolor{Gray}{ \{string\} type returned file type "png" "webp" "jpeg" (jpeg is fastest)}@>
+<@\textcolor{Gray}{ * }@><@\textcolor{Tan}{ @returns}@><@\textcolor{Gray}{ Promise for Buffer of file}@>
+<@\textcolor{Gray}{ }@><@\textcolor{Gray}{*/}@>
+ export async <@\textcolor{BlueViolet}{function}@> <@\textcolor{RoyalBlue}{renderMap}@><@\textcolor{Dandelion}{(}@>
+    <@\textcolor{Blue}{center}@>: string <@\textcolor{Red}{=}@> <@\textcolor{Black}{''}@><@\textcolor{Sepia}{50.927054,11.5892372}@><@\textcolor{Black}{''}@>,
+    <@\textcolor{Blue}{size}@>: string <@\textcolor{Red}{=}@> <@\textcolor{Black}{''}@><@\textcolor{Sepia}{360x208}@><@\textcolor{Black}{''}@>,
+    <@\textcolor{Blue}{zoom}@>: string <@\textcolor{Red}{=}@> <@\textcolor{Black}{''}@><@\textcolor{Sepia}{12}@><@\textcolor{Black}{''}@>,
+    <@\textcolor{Blue}{type}@>: <@\textcolor{Black}{''}@><@\textcolor{Sepia}{webp}@><@\textcolor{Black}{''}@> | <@\textcolor{Black}{''}@><@\textcolor{Sepia}{jpeg}@><@\textcolor{Black}{''}@> | <@\textcolor{Black}{''}@><@\textcolor{Sepia}{png}@><@\textcolor{Black}{''}@> <@\textcolor{Red}{=}@> <@\textcolor{Black}{''}@><@\textcolor{Sepia}{jpeg}@><@\textcolor{Black}{''}@>
+  <@\textcolor{Dandelion}{)}@> <@\textcolor{Bittersweet}{\{}@>...<@\textcolor{Bittersweet}{\}}@>
