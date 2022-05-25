@@ -26,14 +26,11 @@
 %Bilder
 \usepackage[section]{placeins}%begrenzt gleiten bilder auf section
 % Bessere UnterstÃƒÂ¼tzung fÃƒÂ¼r PDF-Features
-\usepackage[breaklinks=true,hidelinks]{hyperref}
+\usepackage[breaklinks=true,hidelinks,hyperfootnotes=false]{hyperref}
 \usepackage{cleveref}
 \renewcommand{\namecref}{Abschnitt}
-%pdf page
+%pdf Seiten einbinden
 \usepackage{pdfpages}
-% Plotter Funktionen
-\usepackage{tikz}
-\usetikzlibrary{intersections}
 %Inhaltsverzeichnis und Nummerrierung nach standard
 \renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
 \setlength{\parindent}{0pt}
@@ -88,7 +85,7 @@
 	{Ã¤}{{\"a}}1
 	{Ã¶}{{\"o}}1
 }
-%dracula
+%dracula color theme
 \usepackage{draculatheme}
 %highlighter comand
 \newcommand{\code}[1]{\texttt{#1}} % inline code setting
@@ -102,9 +99,9 @@ style=authoryear, %% Zitierstil (siehe Dokumentation)
 natbib=true, %% Bereitstellen von natbib-kompatiblen Zitierkommandos
 hyperref=true, %% hyperref-Paket verwenden, um Links zu erstellen
 ]{biblatex}
-%Flowcharts
-\usepackage{tikz}
-\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,petri,calc,shadows}
+
+%Zeilenabstand 
+\usepackage[singlespacing]{setspace} % doublespacing, onehalfspacing, mehr infos unter: https://www.namsu.de/Extra/pakete/Setspace.html
 
 \makeatother
 
@@ -123,10 +120,11 @@ hyperref=true, %% hyperref-Paket verwenden, um Links zu erstellen
 \tableofcontents
 \newpage
 
-\chapter{Lorem sssssIA}
+\chapter{Lorem Ipsum}
+
 
 \section{Lorem X\cite{RPOI2003}}
-Culpa fugiat laboris mollit sint sunt. Laborum Lorem Lorem deserunt velit sint minim laborum consequat sunt elit laboris. Reprehenderit et ad ex ut consectetur et id adipisicing nulla ex cillum. Amet magna ex exercitation adipisicing eu amet irure anim. Quis laborum veniam elit sint aute. Velit proident aliquip nostrud ullamco tempor dolore cupidatat velit nulla qui exercitation. \\
+Culpa wie in Abbildung \ref{fig:GidSys} oder in Snippet\footnote{Ich weiß viele	sehen das ganz anders und zitieren auch in oder mit Fußnoten.} \ref{lst:docRenderMap} fugiat laboris mollit sint sunt. Laborum Lorem Lorem deserunt velit sint minim laborum consequat sunt elit laboris. Reprehenderit et ad ex ut consectetur et id adipisicing nulla ex cillum. Amet magna ex exercitation adipisicing eu amet irure anim. Quis laborum veniam elit sint aute. Velit proident aliquip nostrud ullamco tempor dolore cupidatat velit nulla qui exercitation. \\
 
 Deserunt est sint esse ex cillum duis deserunt ea officia veniam Lorem elit nulla. Pariatur laborum ipsum quis Lorem consequat aute ea mollit. Laborum fugiat veniam duis minim dolore adipisicing dolor in labore.
 
@@ -147,15 +145,22 @@ Laboris laboris anim deserunt laboris laborum est.
 \subsection{Lorem ipsum}
 Culpa labore cupidatat nostrud ullamco nisi ea. Quis sint nostrud pariatur exercitation excepteur ea est dolor ullamco. Sit magna deserunt pariatur dolore dolore occaecat aliquip adipisicing aliqua. Mollit nisi ad voluptate mollit quis esse duis excepteur amet aute deserunt sit. Duis aliquip labore sit quis irure cillum do. Dolore do consequat ut est exercitation dolore nostrud est. Anim irure pariatur est esse tempor ad labore qui. \\
 
-Consequat labore laborum fugiat velit occaecat commodo velit excepteur. Ex cillum laboris aliqua reprehenderit deserunt. In ipsum quis velit pariatur Lorem sit officia aute ea.
+Consequat labore laborum fugiat velit occaecat commodo velit excepteur. Ex cillum laboris aliqua reprehenderit deserunt. In ipsum quis velit pariatur Lorem sit officia aute ea. Sint in exercitation proident ea do. Do aliqua veniam minim est non reprehenderit minim eiusmod laboris excepteur. Laboris in anim occaecat nostrud esse ex sit id eu magna. Excepteur ut velit qui qui sit aliquip tempor amet est. Ullamco pariatur dolor amet eu dolor. Do labore do dolor pariatur dolor aliquip reprehenderit fugiat et nulla sunt.
 
-Sint in exercitation proident ea do. Do aliqua veniam minim est non reprehenderit minim eiusmod laboris excepteur. Laboris in anim occaecat nostrud esse ex sit id eu magna. Excepteur ut velit qui qui sit aliquip tempor amet est. Ullamco pariatur dolor amet eu dolor. Do labore do dolor pariatur dolor aliquip reprehenderit fugiat et nulla sunt.
 \begin{minipage}{\linewidth}
 	\lstinputlisting[style=basiclst,caption={Dokumentation und Defaultparameter der renderMap-Funktion}, label={lst:docRenderMap}]{data/snippets/mapPreviewDoc.js.txt}
 \end{minipage}
 
+\setcounter{footnote}{9}
+%....
+Wenn mehr als 9 Fußnoten gesetzt werden und als Zähler\footnote{Zählart
+	mag keine Korrektur.} Fußnotensymbole verwendet werden gibt es wo die
+Verwendung von alphalph eine Fehlermeldung. Jetzt aber nicht mehr.
+%...
+
 %% Quellen:
 \printbibliography
+%Abbildungverzeichnis
 \listoffigures
 
 %\includepdf[pages={1}]{data/docs/lorem.pdf} % site of the pdf
